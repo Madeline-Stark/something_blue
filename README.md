@@ -1,24 +1,29 @@
-# README
+# Something Blue
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+User
+username
+email
 
-Things you may want to cover:
+Post
+title
+content
+user_id
 
-* Ruby version
+user has_many posts
+post belongs_to user
 
-* System dependencies
+Post
+C
+new => get '/posts/new'
+create => post '/posts'
 
-* Configuration
+R
+index => get '/posts'
+show => get '/posts/:id'
 
-* Database creation
+U
+edit => get '/posts/:id/edit'
+update => patch '/posts/:id'
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+D
+destroy => delete '/posts/:id'
