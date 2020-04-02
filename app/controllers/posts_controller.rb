@@ -3,7 +3,16 @@ class PostsController < ApplicationController
   before_action :current_user
 
   def index
-    @posts = Post.all
+    #if we are coming from a nested route
+    @user = User.find_by(id: params[:user_id])
+    if @user
+      @posts = @user.posts
+       #we only want to see that user's posts
+
+    else 
+    #load all the posts
+      @posts = Post.all
+    end
   end
 
   def show

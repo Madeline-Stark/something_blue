@@ -27,3 +27,14 @@ update => patch '/posts/:id'
 
 D
 destroy => delete '/posts/:id'
+
+
+
+User
+- password_digest
+- bcrypt
+- has_secure_password
+
+- signup
+- log in
+- log out
